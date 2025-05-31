@@ -31,6 +31,7 @@ function intento() {
     //Con el condicional if evalúo la respuesta del usuario
     if (probar.value == guess) {
         message.innerHTML = "¡Adivinaste!";
+    //Establezco estilo para el mensaje
         message.style.fontWeight = "900"
         message.style.color = "green";
 
@@ -45,6 +46,7 @@ function intento() {
         //Establezco el límite de mi contador y le mando un mensaje al usuario
         if (i === 7) {
             message.innerHTML = "¡Has perdido! El número secreto era:  " + guess + ". Vuelve a empezar.";
+            //Establezco estilo para el mensaje
             message.style.color = "red";
             message.style.fontWeight = "900"
             contador.fontsize = "20px";
@@ -72,6 +74,7 @@ reset.addEventListener("click", () => {
 
 
     //Al presionar el botón también se eliminan los mensajes
+    //Se reinicia el estilo de los mensajes a por defecto
     contador.style = "default"
     message.style = "default"
     message.innerHTML = " ";
